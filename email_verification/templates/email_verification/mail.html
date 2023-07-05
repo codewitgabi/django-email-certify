@@ -27,7 +27,7 @@
 	        <p>Your registration process is almost done. Please confirm your email by clicking on the link below to finish signing up.</p>
 	        <p>Visit this <a href="{{ request.scheme }}://{{ request.get_host }}{% url 'verify_email:pre-login' token %}">link</a> to complete the process.</p>
 	       
-	        <p>This link will expire after 5 minutes.</p>
+	        <p>This link will expire after 24 hours.</p>
         </div>
     </main>
 </body>

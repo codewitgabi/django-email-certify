@@ -18,8 +18,8 @@ class Token(models.Model):
 	@property
 	def has_expired(self):
 		delta = timezone.now() - self.date_created
-		# token expires in five minutes
-		return delta.seconds > 300
+		# token expires in a day
+		return delta.seconds > (24 * 60 * 60)
 	
 	def __str__(self):
 		return str(self.id)

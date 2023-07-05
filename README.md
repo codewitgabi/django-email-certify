@@ -79,6 +79,8 @@ def signup(request):
         form = RegisterForm(request.POST)
         if form.is_valid():
             VerifyEmail(request, form)
+
+            return redirect("redirect_url")
     
     return render(request, "register.html", {"form": form})
 ```
